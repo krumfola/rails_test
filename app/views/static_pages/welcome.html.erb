@@ -1,3 +1,11 @@
 <h1>Hey</h1>
 
 <p>You can add test wihtin the tags <%= @math %> </p>
+
+<p>Our last user is: <%= @last_user_name %>, the last email is <%= @last_user_email %></p>
+
+<%= form_for @new_user, :url => { :action => "create" } do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :email %>
+  <%= f.submit "Create Neew Account", class: "btn btn-success" %>
+<% end %>
